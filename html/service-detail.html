@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development | WP Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .service-hero {
+            background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .service-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .breadcrumbs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        .breadcrumbs a {
+            color: #38bdf8;
+        }
+        .service-detail-section {
+            padding: 100px 0;
+        }
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 5rem;
+            align-items: start;
+        }
+        .detail-content h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        .detail-content p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        .service-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .feature-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        .feature-item i {
+            color: #38bdf8;
+            font-size: 1.2rem;
+            margin-top: 4px;
+        }
+        .feature-item h4 {
+            margin-bottom: 0.5rem;
+        }
+        .feature-item p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        .service-sidebar {
+            background: #f8fafc;
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            position: sticky;
+            top: 120px;
+        }
+        .sidebar-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        .booking-form input, .booking-form select, .booking-form textarea {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 1.2rem;
+            font-family: inherit;
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+        .btn-submit:hover {
+            background: var(--primary-hover);
+        }
+        @media (max-width: 992px) {
+            .detail-grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+            .service-sidebar {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">WP<span>Services</span></a>
+            
+            <nav class="nav-links">
+                <div class="nav-item">
+                    <a href="index.html#home">Home</a>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#plugins">Plugins <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#">Speed Optimizer</a></li>
+                        <li><a href="#">Security Pro</a></li>
+                        <li><a href="#">SEO Master</a></li>
+                        <li><a href="#">Form Builder</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#services">Services <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">App Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Cloud Hosting</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#portfolio">Portfolio</a>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#reviews">Reviews</a>
+                </div>
+            </nav>
+
+            <div class="header-btns">
+                <button class="btn btn-primary">Get Started</button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="service-hero">
+            <div class="container">
+                <h1>Web Development</h1>
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <a href="index.html#services">Services</a>
+                    <span>/</span>
+                    <span>Web Development</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-detail-section">
+            <div class="container">
+                <div class="detail-grid">
+                    <div class="detail-content reveal">
+                        <h2>Build Your Future with <span>Custom Code</span></h2>
+                        <p>Our web development services focus on creating fast, secure, and scalable solutions that help businesses grow. We don't just build websites; we create digital experiences that resonate with your users and drive results.</p>
+                        
+                        <div class="service-image" style="margin-bottom: 3rem;">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Web Development" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                        </div>
+
+                        <h3>Why Our Web Development?</h3>
+                        <p>We use modern frameworks and best practices to ensure your site is built to last. Our team covers everything from frontend design to backend architecture.</p>
+
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <i class="fa-solid fa-bolt"></i>
+                                <div>
+                                    <h4>Fast Performance</h4>
+                                    <p>Optimized code and assets for lighting fast load times.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <div>
+                                    <h4>Superior Security</h4>
+                                    <p>Built-in protection against common vulnerabilities.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fa-solid fa-gears"></i>
+                                <div>
+                                    <h4>Fully Scalable</h4>
+                                    <p>Infrastructure that grows along with your user base.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fa-solid fa-mobile"></i>
+                                <div>
+                                    <h4>Mobile Responsive</h4>
+                                    <p>Flawless experience across all devices and sizes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-sidebar reveal">
+                        <h3 class="sidebar-title">Request a Quote</h3>
+                        <form class="booking-form">
+                            <input type="text" placeholder="Full Name" required>
+                            <input type="email" placeholder="Email Address" required>
+                            <select required>
+                                <option value="">Select Service</option>
+                                <option value="web" selected>Web Development</option>
+                                <option value="app">App Development</option>
+                                <option value="uiux">UI/UX Design</option>
+                                <option value="cloud">Cloud Hosting</option>
+                            </select>
+                            <textarea rows="5" placeholder="Project Details"></textarea>
+                            <button type="submit" class="btn-submit">Submit Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 1.5rem; display: inline-block;">WP<span>Services</span></a>
+                    <p>Excellence in WordPress development and IT consulting since 2018.</p>
+                    <div class="social-links" style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#portfolio">Our Work</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Support Center</a></li>
+                        <li><a href="#">Plugin Docs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe for the latest updates.</p>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">Join</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 WP Services. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
